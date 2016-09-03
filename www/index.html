@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>Pentaxial Base APP</title>
+
+    <!-- css de ajuste do cropper by Fábio Pereira -->
+    <link href="lib/cropperjs/dist/cropper.css" rel="stylesheet">
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Run app -->
+    <script src="js/app.js"></script>
+
+    <!-- Module com.ionic.quickstart.module.Init -->
+    <script src="js/_module.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/config.js"></script>
+
+
+    <!-- Module com.ionic.quickstart.Controller -->
+    <script src="controller/_module.js"></script>
+    <script src="controller/login.js"></script>
+    <script src="controller/tabs.js"></script>
+
+
+    <!-- Module com.ionic.quickstart.Utils -->
+    <script src="utils/_module.js"></script>
+    <script src="utils/localstorage.js"></script>
+    <script src="utils/constantes.js"></script>
+    <script src="utils/modais.js"></script>
+    <script src="utils/popups.js"></script>
+    <script src="utils/galeria.js"></script>
+    <script src="utils/cropper.js"></script>
+    <script src="utils/cache.js"></script>
+
+
+    <!-- Module com.ionic.quickstart.conexao -->
+    <script src="conexao/_module.js"></script>
+    <script src="conexao/auth.js"></script>
+    <script src="conexao/conexao.js"></script>
+    <script src="conexao/interceptador.js"></script>
+
+    <!-- Module com.ionic.quickstart.model -->
+    <script src="model/_module.js"></script>
+    <script src="model/usuario.js"></script>
+
+    <!-- Module com.ionic.quickstart.Filter -->
+    <script src="filtros/_module.js"></script>
+
+    <!-- Module com.ionic.quickstart.diretivas -->
+    <script src="diretivas/_modules.js"></script>
+    <script src="diretivas/localizacao.js"></script>
+    <script src="diretivas/lazy.js"></script>
+    <script src="diretivas/lazyBack.js"></script>
+    <script src="diretivas/enter.js"></script>
+    <script src="diretivas/compile.js"></script>
+
+
+    <!-- Plugins de terceios -->
+    <script src="lib/angular-elastic/elastic.js"></script>
+    <script src="lib/cropperjs/dist/cropper.js"></script>
+    <script src="lib/ui-mask/mask.min.js"></script>
+
+
+  </head>
+  <body ng-app="quickstart">
+    <ion-nav-view></ion-nav-view>
+  </body>
+
+
+  <!-- google maps javascript -->
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry"></script> -->
+</html>

@@ -1,0 +1,58 @@
+<ion-view>
+  <ion-content has-header="true" padding="true" class="conteudo">
+
+    <!-- Logo -->
+    <div class="boxLogo">
+      <div class="headerLogo bar bar-header row row-center">
+        <div class="col col-center">
+          <h1 class="Logoh1">m<br></h1>
+        </div>
+      </div>
+      <div class="subheaderLogo bar bar-subheader">
+        <div class="col col-center">
+          <h2 class="Logoh2">My<span style="font-weight: bold;">Face</span>Gallery</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Fim | Logo -->
+
+
+    <!-- Formulário de Cadastro -->
+    <form class="boxFormCadastro" name="formLogin" ng-submit="login()">
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="email" class="inputText-flp" placeholder="E-mail" name="email" ng-model="usuarioLogin.email" autocomplete="off" required>
+            <i ng-class="formLogin.email.$pristine ? '' : formLogin.email.$valid ? 'icon-ativo-2' : 'icon-error' " class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="password" class="inputText-flp" placeholder="Senha" name="senha" ng-model="usuarioLogin.senha" autocomplete="off" required maxlength="16" minlength="8">
+            <i ng-class="formLogin.senha.$pristine ? '' : formLogin.senha.$valid ? 'icon-ativo-2' : 'icon-error' " class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <button class="button-royal botaoEntrar" ng-disabled="formLogin.$invalid" type="submit">Entrar</button>
+        </div>
+      </div>
+
+    </form>
+    <!-- Fim | Formulário de Cadastro -->
+
+    <!-- Mensagem de erro -->
+    <div class="error_request" ng-show="error_request.not_found">
+      <i class="icon ion-alert-circled"></i>
+      <span>Usuário ou senha inválida.</span>
+    </div>
+
+</ion-content>
+</ion-view>

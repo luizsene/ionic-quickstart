@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for utils/cropper.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">utils/</a> cropper.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.13% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.13% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @ngdoc service
+ * @name com.ionic.quickstart.utils.cropper:cropper
+ * @author Fábio Pereira &lt;fabio.pereira.gti@gmail.com&gt;
+ * @description
+ * Servico que representa e manipula o Objeto cropper na apliação
+ */
+(function () {
+  'use strict';
+  angular.module('com.ionic.quickstart.utils.cropper', [])
+  .service('Cropper', ['$window','$q', '$rootScope', <span class="fstat-no" title="function not covered" >function ($window, $q, $rootScope) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var ratio;</span>
+<span class="cstat-no" title="statement not covered" >    $rootScope.$on("ratio", <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      ratio = data;</span>
+    });
+<span class="cstat-no" title="statement not covered" >    var size = $window.innerWidth - 20;</span>
+<span class="cstat-no" title="statement not covered" >    var style = document.createElement('style');</span>
+<span class="cstat-no" title="statement not covered" >    style.type = "text/css";</span>
+<span class="cstat-no" title="statement not covered" >    style.innerHTML = ".cropper-caixa{text-align: center; height:"+ size +"px; width: "+ size +"px; position: relative; margin: auto;}";</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementsByTagName('head')[0].appendChild(style);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    self.criar = <span class="fstat-no" title="function not covered" >function (image) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var h = 0;</span>
+<span class="cstat-no" title="statement not covered" >      var w = 0;</span>
+<span class="cstat-no" title="statement not covered" >      var ratio = 0;</span>
+<span class="cstat-no" title="statement not covered" >      var cropper = new Cropper(image, {</span>
+        aspectRatio: 1/1,
+        dragMode: 'move',
+        autoCropArea: 1,
+        restore: false,
+        guides: false,
+        highlight: true,
+        cropBoxMovable: false,
+        cropBoxResizable: false,
+        viewMode: 3,
+        rotatable: false,
+        crop: <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          h = data.height;</span>
+<span class="cstat-no" title="statement not covered" >          w = data.width;</span>
+        },
+        zoom: <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          $rootScope.$broadcast("ratio", data.ratio);</span>
+<span class="cstat-no" title="statement not covered" >          console.warn('data inicial: ', data);</span>
+          // Zoom in
+<span class="cstat-no" title="statement not covered" >          if (data.ratio &gt; data.oldRatio &amp;&amp; h &lt;= 400) {</span>
+<span class="cstat-no" title="statement not covered" >            return false; </span>// Prevent zoom in
+          }
+&nbsp;
+          // Zoom out
+<span class="cstat-no" title="statement not covered" >          if (data.ratio &lt; data.oldRatio) {</span>
+            // return false; // Prevent zoom in
+          }
+        }
+      })
+<span class="cstat-no" title="statement not covered" >      cropper.ratio = ratio;</span>
+<span class="cstat-no" title="statement not covered" >      return cropper;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    self.cortar = <span class="fstat-no" title="function not covered" >function (cropper) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        var sourceCanvas = cropper.getCroppedCanvas({width: 650, height: 650});</span>
+<span class="cstat-no" title="statement not covered" >        var canvas = document.createElement('canvas');</span>
+<span class="cstat-no" title="statement not covered" >        canvas.height = 650;</span>
+<span class="cstat-no" title="statement not covered" >        canvas.width = 650;</span>
+<span class="cstat-no" title="statement not covered" >        var img = document.createElement('img');</span>
+<span class="cstat-no" title="statement not covered" >        img.src = sourceCanvas.toDataURL();</span>
+<span class="cstat-no" title="statement not covered" >        var context = canvas.getContext("2d");</span>
+<span class="cstat-no" title="statement not covered" >        context.drawImage(img, 0, 0);</span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(img.src);</span>
+      } catch (e) {
+<span class="cstat-no" title="statement not covered" >        deferred.reject(e);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return deferred.promise;</span>
+    }
+  }])
+&nbsp;
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 23 2016 15:31:33 GMT-0300 (BRT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

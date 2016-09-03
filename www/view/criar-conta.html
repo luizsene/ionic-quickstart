@@ -1,0 +1,101 @@
+<ion-view>
+  <ion-content has-header="true" padding="true" class="conteudo">
+
+    <!-- Logo -->
+    <div class="boxLogo">
+      <div class="headerLogo bar bar-header row row-center">
+        <div class="col col-center">
+          <h1 class="Logoh1">m<br></h1>
+        </div>
+      </div>
+      <div class="subheaderLogo bar bar-subheader">
+        <div class="col col-center">
+          <h2 class="Logoh2">My<span style="font-weight: bold;">Face</span>Gallery</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Fim | Logo -->
+
+    <!-- Formulário de Cadastro -->
+    <form class="boxFormCadastro" name="criarNovaConta" ng-submit="criarConta()">
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="text" class="inputText-flp" placeholder="Nome" name="nome" ng-model="usuarioCriar.nome" autocomplete="off" required  minlength="3">
+            <i  ng-class="criarNovaConta.nome.$pristine ? '' : criarNovaConta.nome.$valid ? 'icon-ativo-2' : 'icon-error'" class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="text" class="inputText-flp" placeholder="Sobrenome" name="sobrenome" ng-model="usuarioCriar.sobrenome" autocomplete="off" required minlength="3">
+            <i ng-class="criarNovaConta.sobrenome.$pristine ? '' : criarNovaConta.sobrenome.$valid ? 'icon-ativo-2' : 'icon-error' " class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="email" class="inputText-flp" placeholder="E-mail" name="email" ng-model="usuarioCriar.email" autocomplete="off" required>
+            <i ng-class="criarNovaConta.email.$pristine ? '' : criarNovaConta.email.$valid ? 'icon-ativo-2' : 'icon-error' " class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="password" class="inputText-flp" placeholder="Senha" name="senha" ng-model="usuarioCriar.senha" autocomplete="off" required maxlength="16" minlength="8">
+            <i ng-class="criarNovaConta.senha.$pristine ? '' : criarNovaConta.senha.$valid ? 'icon-ativo-2' : 'icon-error' " class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <label class="item item-input item-input-flp">
+            <input type="text" ui-mask="99/99/9999" class="inputText-flp"  ui-mask-placeholder placeholder="Data de nascimento"  name="dataNascimento" ng-model="usuarioCriar.dataNascimento" autocomplete="off" required
+              ng-pattern="/^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))|(((0[1-9]|[12]\d|3[01])(0[13578]|1[02])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|[12]\d|30)(0[13456789]|1[012])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|1\d|2[0-8])02((1[6-9]|[2-9]\d)?\d{2}))|(2902((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$/">
+            <i ng-class="criarNovaConta.dataNascimento.$pristine ? '' : criarNovaConta.dataNascimento.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <div class="checkbox">
+            <label  ng-click="setSexo('F')">
+              <input type="checkbox" ng-checked="usuarioCriar.sexo === 'F'" checked="checked"/><i class="helper"></i><span style="color: #fff">Feminino</span>
+            </label>
+          </div>
+          <div class="checkbox" >
+            <label ng-click="setSexo('M')">
+              <input type="checkbox" ng-checked="usuarioCriar.sexo === 'M'" checked="checked"/><i class="helper"></i><span style="color: #fff">Masculino</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <button class="button-royal botaoEntrar" type="submit">Criar Conta</button>
+        </div>
+      </div>
+
+      <div class="row row-center">
+        <div align="center" class="col col-center">
+          <div class="colorWhite">
+            Ao clicar em "Criar Conta" você aceita o termo de <u><b>política de dados</b></u> e uso de <u><b>cookies</b></u>.
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Fim | Formulário de Cadastro -->
+  </div>
+
+</ion-content>
+</ion-view>

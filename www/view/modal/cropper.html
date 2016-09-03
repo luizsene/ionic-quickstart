@@ -1,0 +1,40 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Cropper</h1>
+  </ion-header-bar>
+  <ion-content>
+
+    <div class="row">
+      <div class="col">
+        <p align="center" class="cor-ativo">
+          Posicione a parte da imagem que deseja recortar dentro da caixa e clique em concluir.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="cropper-caixa">
+        <img ng-src="{{src}}" id="imagemSelecionada" alt="Imagem Selecionada" class="cx-img-cropper"/>
+      </div>
+    </div>
+
+    <div class="row paddingTopRow">
+      <div class="col-50">
+        <button class="button icon-left ion-ios-crop-strong button-cropper" ng-disabled="loadingCropper == true" ng-click="recortarImagem()" style="float: right;">Concluir</button>
+      </div>
+      <div class="col-50">
+        <button class="button button-assertive icon-left ion-ios-close-empty button-cropper" ng-disabled="loadingCropper == true" ng-click="cancelarCropper()">Cancelar</button>
+      </div>
+    </div>
+
+    <div class="row" ng-show="loadingCropper == true">
+      <div class="col loading-recortando">
+        <ion-spinner icon="circles" class="spinner-balanced"></ion-spinner>
+        <p class="balanced">
+          Recortando imagem, por favor aguarde...
+        </p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

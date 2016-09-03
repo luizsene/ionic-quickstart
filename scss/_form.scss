@@ -1,0 +1,347 @@
+$body-bg: #fff;
+
+
+// Shadows
+$shadow-inset: inset 0 2px 2px 0 rgba(0,0,0,.14);
+$shadow-0: 0 0 1px rgba(0, 0, 0, 0);
+$shadow-2: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+$shadow-3: 0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12);
+$shadow-4: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+$shadow-6: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
+$shadow-8: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);
+
+// Font Sizes
+$mf-font-size: 1rem !default;
+$mf-active-font-size: $mf-font-size * 0.8 !default;
+$mf-active-top: -$mf-font-size !default;
+
+// Margin & Paddings
+$mf-gap: $mf-font-size * 1.5 !default;
+$mf-spacer: $mf-font-size / 8 !default;
+$mf-fieldset-margin: 0 0 $mf-gap * 2 !default;
+$mf-checkbox-gap: $mf-font-size * 2 !default;
+$mf-checkbox-top: 0 !default;
+$mf-radio-margin: $mf-font-size / -4 !default;
+
+// Colors
+$mf-input-color: #333 !default;
+$mf-border-color: #999 !default;
+$mf-label-color: lighten($mf-border-color, 10%) !default;
+$mf-active-color: darken($mf-border-color, 10%) !default;
+$mf-focus-color: #5437b7 !default;
+$mf-error-color: #d9534f !default;
+
+// Animation
+$mf-transition-speed: 0.28s !default;
+
+
+// Radio & Checkbox
+.checkbox,
+.form-radio {
+	label {
+		position: relative;
+		cursor: pointer;
+		padding-left: $mf-checkbox-gap;
+		text-align: left;
+		color: $mf-input-color;
+		display: block;
+	}
+
+	input {
+		width: auto;
+		opacity: 0.00000001;
+		position: absolute;
+		left: 0;
+	}
+	padding-left: 15px;
+}
+
+.radio {
+	margin-bottom: $mf-font-size;
+	// scss-lint:disable QualifyingElement, NestingDepth
+	input:checked {
+		~ .helper {
+			&::after {
+				transform: scale(0.5);
+			}
+			&::before {
+				color: $mf-focus-color;
+			}
+		}
+	}
+}
+
+.checkbox {
+	.helper {
+		color: $mf-border-color;
+		position: absolute;
+		top: $mf-checkbox-top;
+		left: 0;
+		width: $mf-font-size;
+		height: $mf-font-size;
+		z-index: 0;
+		border: ($mf-font-size / 8) solid currentColor;
+		border-radius: ($mf-font-size / 16);
+		transition: border-color $mf-transition-speed ease;
+
+		&::before,
+		&::after {
+			position: absolute;
+			height: 0;
+			width: ($mf-font-size * 0.2);
+			background-color: $mf-focus-color;
+			display: block;
+			transform-origin: left top;
+			border-radius: ($mf-font-size / 4);
+			content: '';
+			transition: opacity $mf-transition-speed ease, height 0s linear $mf-transition-speed;
+			opacity: 0;
+		}
+
+		&::before {
+			top: ($mf-font-size * 0.65);
+			left: ($mf-font-size * 0.38);
+			transform: rotate(-135deg);
+			box-shadow: 0 0 0 ($mf-font-size / 16) $body-bg;
+		}
+
+		&::after {
+			top: ($mf-font-size * 0.3);
+			left: 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	label:hover .helper {
+		color: $mf-focus-color;
+	}
+
+	input:checked {
+		~ .helper {
+			color: $mf-focus-color;
+
+			&::after,
+			&::before {
+				opacity: 1;
+				transition: height $mf-transition-speed ease;
+			}
+
+			&::after {
+				height: ($mf-font-size / 2);
+			}
+
+			&::before {
+				height: ($mf-font-size * 1.2);
+				transition-delay: $mf-transition-speed;
+			}
+		}
+	}
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: $mf-font-size;
+}
+
+.has-error {
+	.legend.legend,
+	&.form-group .control-label.control-label {
+		// Prevent !importantRule
+		color: $mf-error-color;
+	}
+
+	&.form-group,
+	&.checkbox,
+	&.radio,
+	&.form-radio {
+		.form-help,
+		.helper {
+			color: $mf-error-color;
+		}
+	}
+
+	.bar {
+		&::before {
+			background: $mf-error-color;
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+
+.material {
+	position: relative;
+	padding: 0;
+	margin: 7px;
+	border: none;
+	overflow: visible;
+	padding: 20px 0px 0 0;
+}
+.material input {
+	padding-left: 10px !important;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px 0;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	border-bottom: 2px solid #DDD;
+	font-size: 120%;
+	outline: none;
+	cursor: text;
+}
+
+
+.material textarea {
+	padding-left: 10px !important;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px 0;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	border-bottom: 2px solid #DDD;
+	font-size: 120%;
+	outline: none;
+	cursor: text;
+	resize: none;
+}
+
+.material input::-webkit-input-placeholder {
+	transition: color 300ms ease;
+}
+
+
+.material textarea::-webkit-input-placeholder {
+	transition: color 300ms ease;
+}
+
+.material input:not(:focus)::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+.material textarea:not(:focus)::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.material hr {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 2px;
+	border: none;
+	background: $cor_2;
+	font-size: 1px;
+	will-change: transform, visibility;
+	transition: all 200ms ease-out;
+	transform: scaleX(0);
+	visibility: hidden;
+	z-index: 10;
+}
+
+
+.material input:focus ~ hr {
+	transform: scaleX(1);
+	visibility: visible;
+}
+
+.material textarea:focus ~ hr {
+	transform: scaleX(1);
+	visibility: visible;
+}
+
+.material label {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 120%;
+	color: $cor_2;
+	transform-origin: 0 -150%;
+	transition: transform 300ms ease;
+	pointer-events: none;
+}
+
+
+.material input:focus ~ label,
+.material input:valid ~ label {
+	transform: scale(0.6);
+}
+
+
+.material textarea:focus ~ label,
+.material textarea:valid ~ label {
+	transform: scale(0.6);
+}
+
+.line-success{
+	border-bottom: 2px solid $balanced !important;
+}
+
+.line-error{
+	border-bottom: 2px solid $assertive !important;
+}
+
+.icon-edit-form{
+	position: absolute;
+	float: right;
+	top: 16px;
+	right: 7px;
+}
+
+
+/* ================= SELECT ================= */
+$color-black: "0,0,0";
+$select-background-color: transparent;
+$select-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$select-font-size: 16px;
+$select-color: unquote("rgba(#{$color-black}, 0.26)") !default;
+$select-padding: 4px;
+//
+// /* ==========  Select Field ========== */
+//
+/* Style Select Field */
+select {
+	font-family: inherit;
+	background-color: transparent;
+	width: 97%;
+	padding: $select-padding 0;
+	font-size: $select-font-size;
+	color: $cor_5;
+	border: none;
+	height: 44px;
+	border-bottom: 2px solid #666;
+	margin-left: 7px;
+}
+
+/* Remove focus */
+select:focus {outline: none}
+
+	/* Hide label */
+	.mdl-selectfield label {display: none;}
+	/* Use custom arrow */
+	.mdl-selectfield select {appearance: none}
+	.mdl-selectfield {
+		width: 100%;
+		margin-top: 15px;
+		position: relative;
+		&:after {
+			position: absolute;
+			top: 0.75em;
+			right: 0.5em;
+			/* Styling the down arrow */
+			width: 0;
+			height: 0;
+			padding: 0;
+			content: '';
+			border-left: .25em solid transparent;
+			border-right: .25em solid transparent;
+			border-top: .375em solid $select-border-color;
+			pointer-events: none;
+		}
+	}

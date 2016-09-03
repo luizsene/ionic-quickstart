@@ -1,0 +1,57 @@
+<form  name="formEditar">
+
+  <fieldset class="material">
+    <input type="text"  required minlength="3" name="nome" ng-model="usuario.nome">
+     <i ng-class="formEditar.nome.$pristine ? '' : formEditar.nome.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon-edit-form icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+        <hr>
+    <label for="nome">Nome</label>
+  </fieldset>
+
+  <fieldset class="material">
+   <input type="text" required name="sobrenome" minlength="3" ng-model="usuario.sobrenome">
+    <i ng-class="formEditar.sobrenome.$pristine ? '' : formEditar.sobrenome.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon-edit-form icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+       <hr>
+   <label for="sobrenome">Sobrenome</label>
+ </fieldset>
+
+    <fieldset class="material">
+      <textarea type="text" required name="sobre" minlength="10" ng-model="usuario.sobre" msd-elastic></textarea>
+       <i ng-class="formEditar.sobre.$pristine ? '' : formEditar.sobre.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon-edit-form icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+          <hr>
+      <label for="sobre">Sobre</label>
+   </fieldset>
+
+   <fieldset class="material">
+     <input type="text" ui-mask="99/99/9999" ui-mask-model-view-value="true" autocomplete="off" name="dataNascimento"  ng-model="usuario.dataNascimento" required
+      ng-pattern="/^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))|(((0[1-9]|[12]\d|3[01])(0[13578]|1[02])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|[12]\d|30)(0[13456789]|1[012])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|1\d|2[0-8])02((1[6-9]|[2-9]\d)?\d{2}))|(2902((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$/">
+     <i ng-class="formEditar.dataNascimento.$pristine ? '' : formEditar.dataNascimento.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon-edit-form icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+         <hr>
+     <label for="dataNascimento">Data de nascimento</label>
+  </fieldset>
+
+  <!-- <fieldset class="material">
+    <input type="text" required name="cidade" ng-model="usuario.cidade">
+     <i ng-class="formEditar.cidade.$pristine ? '' : formEditar.cidade.$valid ? 'icon-ativo-2' : 'icon-error' "class="icon-edit-form icon ion-checkmark-round placeholder-icon iconCheck-flp"></i>
+        <hr>
+    <label for="cidade">Cidade</label>
+ </fieldset> -->
+
+    <input required name="localizacao" name="endereco" class="ajuste-div-material" ion-google-place ng-model="myLocation" location-changed="changeLocation(location)"/>
+
+ <div>
+   <fieldset class="material">
+     <label for="cidade">Sexo</label>
+   </fieldset>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-checked="usuario.sexo === 'F'" ng-click="setSexo('F')" /><i class="helper"></i>Feminino
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-checked="usuario.sexo === 'M'" ng-click="setSexo('M')"/><i class="helper"></i>Masculino
+      </label>
+    </div>
+ </div>
+
+</form>
