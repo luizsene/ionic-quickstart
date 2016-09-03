@@ -1,13 +1,13 @@
 ## Ionic Quickstart
 
-### What is this ?
+### What is this ? :pushpin:
 --------------------------------
 
 Quickstart is a template that has boilerplate code that ionic developers have to write when starting a project using the ionic 1.X and provide an organizational base code and distributed according to their responsibilities. The coding style used is described by [@johnpapa](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
-### How to use:
+### How to use: :pushpin:
 --------------------------------
-Run:
+ Run:
 ```
 git clone https://github.com/1fabiopereira/ionic-quickstart.git
 ```
@@ -17,10 +17,10 @@ $ npm install
 $ ionic serve
 ```
 
-### Unit test:
+### Unit test: :pushpin:
 --------------------------------
 
-* Requirements:
+*   Requirements:
 
   [<img src="http://jasmine.github.io/images/jasmine_vertical.svg" width="48">](http://jasmine.github.io/)
 
@@ -33,9 +33,9 @@ Run:
 ```
   gulp test
 ```
-### Coverage:
+### Coverage: :pushpin:
 --------------------------------
-* Requirements:
+*  Requirements:
 
   [istanbul](http://gotwarlost.github.io/istanbul/)
 
@@ -43,32 +43,32 @@ Run:
 
 ### Code style:
 --------------------------------
-* Requirements:
+*  Requirements:
 
   * [Eslint](http://eslint.org/docs/user-guide/configuring)
 
   * [eslint-plugin-angular](https://github.com/Gillespie59/eslint-plugin-angular)
 
-  Run:
+   Run:
 
   ```
   eslint path/*.js
   ```
 
-### Docs:
+### Docs: :pushpin:
 --------------------------------
-* Requirements:
+*  Requirements:
 
   * [gulp-ngdocs](https://github.com/nikhilmodak/gulp-ngdocs)
 
-  Run:
+   Run:
   ```
   gulp ngdocs
   ```
 
   * The generated documentation will be inside __/docs__
 
-### License:
+### License: :notebook_with_decorative_cover:
 --------------------------------
 
 The MIT License (MIT)
