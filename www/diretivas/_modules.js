@@ -16,6 +16,7 @@
     'com.ionic.quickstart.directivas.lazy',
     'com.ionic.quickstart.directivas.lazyBack',
     'com.ionic.quickstart.directivas.enter',
-    'com.ionic.quickstart.directivas.compile'
+    'com.ionic.quickstart.directivas.compile',
+    'com.ionic.quickstart.directivas.next'
   ])
 })()

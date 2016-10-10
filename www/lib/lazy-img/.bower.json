@@ -1,0 +1,35 @@
+{
+  "name": "lazy-img",
+  "homepage": "https://github.com/1fabiopereira/lazy-img",
+  "authors": [
+    "1fabiopereira <fabio.pereira.gti@hotmail.com>"
+  ],
+  "description": "AngularJS directive that adds load in loading images.",
+  "main": "lazy.js",
+  "keywords": [
+    "lazy",
+    "img",
+    "load",
+    "angular",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "929b858054911a2ad1c371eca641d5aca9cafbab"
+  },
+  "_source": "https://github.com/1fabiopereira/lazy-img.git",
+  "_target": "^0.0.1",
+  "_originalSource": "lazy-img",
+  "_direct": true
+}

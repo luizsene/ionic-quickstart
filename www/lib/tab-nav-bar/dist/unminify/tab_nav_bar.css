@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+
+.button.active, .button.activated{
+  border-color: transparent !important;
+  opacity: .5;
+}
+
+.scroll{
+  height: 100%;
+}

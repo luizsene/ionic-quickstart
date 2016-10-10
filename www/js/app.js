@@ -13,7 +13,9 @@
     //Módulos de terceiros
     'ui.mask',
     'monospaced.elastic',
-    'ngCordova'
+    'ngCordova',
+    'com.tabNavBar.1fabiopereira', // tab nav bar
+    'com.1fabiopereira.lazy' // lazy load img
   ])
 
   .run(function($ionicPlatform) {
