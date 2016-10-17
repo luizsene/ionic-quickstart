@@ -1,4 +1,4 @@
-## Ionic Quickstart
+## Ionic Quickstart [![Build Status](https://travis-ci.org/1fabiopereira/ionic-quickstart.svg?branch=master)](https://travis-ci.org/1fabiopereira/ionic-quickstart)
 
 ### What is this ? :pushpin:
 --------------------------------
