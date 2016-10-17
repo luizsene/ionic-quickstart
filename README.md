@@ -1,4 +1,4 @@
-## Ionic Quickstart [![Build Status](https://travis-ci.org/1fabiopereira/ionic-quickstart.svg?branch=master)](https://travis-ci.org/1fabiopereira/ionic-quickstart) 
+## Ionic Quickstart [![Build Status](https://travis-ci.org/1fabiopereira/ionic-quickstart.svg?branch=master)](https://travis-ci.org/1fabiopereira/ionic-quickstart)
 
 ### What is this ? :pushpin:
 --------------------------------
@@ -11,7 +11,7 @@ Quickstart is a template that has boilerplate code that ionic developers have to
 ```
 git clone https://github.com/1fabiopereira/ionic-quickstart.git
 ```
-```
+``` 
 $ cd your/path/project
 $ npm install
 $ ionic serve
