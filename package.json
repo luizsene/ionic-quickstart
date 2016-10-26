@@ -41,7 +41,7 @@
   },
   "scripts": {
     "test": "gulp test",
-    "eslint": "eslint",
+    "eslint": "eslint"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
