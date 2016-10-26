@@ -12,7 +12,9 @@
 * - popups
 * - galeria
 * - cropper
-* - data
+* - cache
+* - audio
+* - vibrar
 */
 
 (function () {
@@ -25,5 +27,7 @@
     'com.ionic.quickstart.utils.galeria',
     'com.ionic.quickstart.utils.cropper',
     'com.ionic.quickstart.ionic-http-offline-cache',
+    'com.ionic.quickstart.utils.audio',
+    'com.ionic.quickstart.utils.vibrar'
   ]);
 })();

@@ -42,7 +42,6 @@
   "scripts": {
     "test": "gulp test",
     "eslint": "eslint",
-    "lint": "eslint"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",

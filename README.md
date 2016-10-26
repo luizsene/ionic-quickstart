@@ -1,4 +1,6 @@
-## Ionic Quickstart [![Build Status](https://travis-ci.org/1fabiopereira/ionic-quickstart.svg?branch=master)](https://travis-ci.org/1fabiopereira/ionic-quickstart)
+## Ionic Quickstart 
+
+[![Build Status](https://travis-ci.org/1fabiopereira/ionic-quickstart.svg?branch=master)](https://travis-ci.org/1fabiopereira/ionic-quickstart)
 
 ### What is this ? :pushpin:
 --------------------------------
@@ -31,7 +33,7 @@ $ ionic serve
 
 Run:
 ```
-  gulp test
+  npm run test
 ```
 ### Coverage: :pushpin:
 --------------------------------
@@ -52,7 +54,7 @@ Run:
    Run:
 
   ```
-  eslint path/*.js
+  npm run eslint
   ```
 
 ### Docs: :pushpin:
