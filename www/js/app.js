@@ -11,7 +11,7 @@
     'com.ionic.quickstart.filtros', //Filtros
 
     //Módulos de terceiros
-    'ui.mask',
+    'ui.utils.masks',
     'monospaced.elastic',
     'ngCordova',
     'com.tabNavBar.1fabiopereira', // tab nav bar
